@@ -34,6 +34,7 @@ namespace IHSMarkitProject
             editorHomePage.UserClickSaveButton();
             editorHomePage.CheckLoginPageIsDisplayed();
             editorHomePage.CloseLoginButton();
+            driver.Close();
         }
 
         [Test]
@@ -41,6 +42,7 @@ namespace IHSMarkitProject
         {
             OptionSection optionSection = new OptionSection(driver);
             optionSection.HideOptions();
+            driver.Close();
         }
 
         [Test]
@@ -49,6 +51,7 @@ namespace IHSMarkitProject
             GettingStated gettingStated = new GettingStated(driver);
             gettingStated.ClickGettingStarted();
             gettingStated.CheckBackToEditorButton();
+            driver.Close();
         }
         [Test]
         public void UserSelectPage()
@@ -56,6 +59,7 @@ namespace IHSMarkitProject
             SelectPackages selectPackages = new SelectPackages(driver);
             selectPackages.SearchPackage();
             selectPackages.SelectPackage();
+            driver.Close();
         }
         
     }
